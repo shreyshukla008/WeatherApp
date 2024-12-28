@@ -1,0 +1,220 @@
+  *,
+  *::before,
+  *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Merriweather Sans", sans-serif;
+      letter-spacing: 1px;
+  }
+
+:root {
+    --colorDark1: #112d4e;
+    --colorDark2: #3f72af;
+    --colorLight1: #dbe2ef;
+    --colorLight2: #f9f7f7;
+}
+
+
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #112d4e;
+    background-image: linear-gradient(160deg, #112d4e 0%, #3f72af 100%);
+}
+
+.visible{
+    display: block;
+    scale: 1;
+}
+
+.hidden{
+    display: none;
+    scale: 0;
+}
+
+.container{
+    width: 600px; 
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 2.5rem;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.location-option{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.option-button{
+    color: white;
+    font: bold;
+    font-size: medium;
+    border: none;
+    background: transparent;
+    border-radius: 0.5em;
+}
+
+.layout1DefaultHeading{
+    font-size:1.8em;
+    letter-spacing: normal;
+    font:normal;
+}
+
+.layout1DefaultPara{
+    font-size: small;
+    font:lighter;
+    opacity: 0.8;
+}
+
+button{
+        all: unset;
+        font-size: 0.85rem;
+        padding: 10px 30px;
+        border-radius: 5px;
+        cursor: pointer;
+}
+
+.active-button{
+    padding: 10px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font: bold;
+    background-color: #6e90b9;
+    
+}
+
+#grant-location-access{
+    color: white;
+    font: bold;
+    font-size: small;
+    border: #6e90b9;
+    width: fit-content;
+    margin: 0.8em auto;
+    background-color: var(--colorDark2);
+    
+}
+
+.error-display{
+    margin-top: 1em;
+
+}
+
+
+/* check if needed or not */
+.layout1{
+    z-index: 5;
+
+}
+
+#layout1-default{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 1rem;
+
+}
+
+.layout2{
+    z-index: 5;
+}
+
+
+#locationIP::placeholder{
+    color: white;
+    font-size: medium;
+}
+
+
+#locationIP:focus{
+    border: none;
+    outline: 3px solid rgba(255, 255, 255, 0.7);
+}
+
+.location-info{
+    display: flex;
+    gap: 0.5em;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+
+.weather-cards{
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.locataionPicker{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.inputOptionContainer{
+    width: 100%;
+    border-radius: 5px;
+    color: white;
+
+}
+
+
+
+#locationIP{
+    width: 100%;
+}
+
+
+#layout2-dummy{
+   height: 500px;
+
+}
+
+#locationIP{
+    height: 40px;
+    background-color: #3f72af;
+}
+
+#layout2-report{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+
+}
+
+#loader{
+    position:absolute;
+    left: auto;
+    top: 250px;
+    left: 200px;
+    z-index: 1;
+   
+}
+
+.card{
+    width: 180px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    row-gap: 0.8em;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    background-color: #6e90b9;
+    box-shadow: 100px #fcfeff;
+
+}

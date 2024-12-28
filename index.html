@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+
+<body>
+
+    <div class="wrapper">
+
+        <div class="container" style="position:relative">
+
+            <div id="loader" class="hidden"  >
+                <img src="Asset/Loader.gif" alt="" width="150px">
+                <p>Loading....</p>
+            </div>
+
+            <h1> WEATHER APP </h1>
+
+            <div class="location-option ">
+                <button id="your-weather-button" class="option-button"> Your Weather</button>
+                <button id="search-weather-button" class="option-button"> Search Weather</button>
+            </div>
+
+            
+    
+            <div class="layout1 " >
+
+                <div class="default" id="layout1-default">
+                    <img src="Asset/location.png" alt="" width="80px" style="margin: 0 auto;">
+                    <h2 class="layout1DefaultHeading">Grant Location Access</h2>
+                    <p class="layout1DefaultPara">Allow access to get weather information</p>
+                    <button id="grant-location-access">GRANT ACCESS</button>
+                </div>
+
+                
+
+            </div>
+    
+            <div class="layout2 hidden" style="z-index: 5;">
+
+                <div class="locataionPicker">
+
+                    <div class="inputOptionContainer">
+                        <input type="text" name="locationInput" id="locationIP" placeholder="Search for City..." autocomplete=“off” required style="padding-left: 2em; color: white;border: none; border-radius: 5px; background-color: rgba(219, 226, 239, 0.5);">
+                    </div>
+
+                    <div>
+                        <button id="locationSearchButton" style="border:none; padding:0;">
+                            <img src="Asset/search.png" alt="" id="searchButtonIcon" width="40px" style="background: transparent; object-fit: cover;">
+                        </button>
+                    </div>
+
+                </div>
+
+                <div class="template-dummy " id="layout2-dummy">
+                   
+                </div>
+
+                <div class="error-display hidden" id="layout2-error" style="z-index: 20;">
+                    <img src="Asset/404-error.png" alt=""  width="300px" >
+                    <p>
+                        <b>City Not Found :(</b>
+                    </p>
+                </div>
+
+
+                <!-- <div class="template-output hidden" id="layout2-report">
+
+                    <div class="location-info">
+                        <div class="location-name" id="location-name-layout2">Location-name-layout-2</div>
+                        <div>
+                            <img id="location-icon-layout2" src="location-icon" alt="">
+                        </div>
+                    </div>
+
+                    <div class="weather-status" id="weather-status-layout2">status</div>
+
+                    <div class="weather-icon" >
+                        <img id="weather-icon-layout2" src="" alt="">
+                    </div>
+
+                    <div class="location-temperature" id="location-temperature-layout2">
+                        temperature
+                    </div>
+
+                    <div class="weather-cards" id="weather-cards-layout2">
+                        
+                        <div class="wind-speed" id="wind-speed-layout2">
+                            <div>
+                                <img id="wind-speed-icon-layout2" src="Asset/wind-turbine.png" alt="" width="40px">
+                            </div>
+                            <div>
+                                <p >WINDSPEED</p>
+                            </div>
+                            <div>
+                                <p id="wind-speed-para-layout2">
+
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="humidity" id="humidity-layout2">
+                            <div>
+                                <img src="Asset/humidity.png" alt="" id="humidity-icon-layout2" width="40px">
+                            </div>
+                            <div>
+                                <p >HUMIDITY</p>
+                            </div>
+                            <div>
+                                <p id="humidity-para-layout2">
+                                    
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="clouds" id="clouds-layout2">
+                            <div>
+                                <img id="clouds-icon-layout2" src="Asset/clouds.png" alt="" width="40px">
+                            </div>
+                            <div>
+                                <p >CLOUDS</p>
+                            </div>
+                            <div>
+                                <p id="clouds-para-layout2">
+                                    
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div> -->
+
+            </div>
+
+            <div class="template-output hidden" id="layout2-report" style="z-index: 5;">
+
+                <div class="location-info">
+                    <div class="location-name" id="location-name-layout2" style="font-size: 2em;">Location-name-layout-2</div>
+                    <div>
+                        <img id="location-icon-layout2" src="location-icon" alt="" width="40spx">
+                    </div>
+                </div>
+
+                <div class="weather-status" id="weather-status-layout2" style="font-size: large;">status</div>
+
+                <div class="weather-icon" >
+                    <img id="weather-icon-layout2" src="" alt="" width="50px">
+                </div>
+
+                <div class="location-temperature" id="location-temperature-layout2" style="font-size: 2.5em; font:bolder">
+                    temperature
+                </div>
+
+                <div class="weather-cards" id="weather-cards-layout2">
+                    
+                    <div class="wind-speed card" id="wind-speed-layout2">
+                        <div>
+                            <img id="wind-speed-icon-layout2" src="Asset/wind-turbine.png" alt="" width="40px">
+                        </div>
+                        <div>
+                            <p >WINDSPEED</p>
+                        </div>
+                        <div>
+                            <p id="wind-speed-para-layout2">
+
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="humidity card" id="humidity-layout2">
+                        <div>
+                            <img src="Asset/humidity.png" alt="" id="humidity-icon-layout2" width="40px">
+                        </div>
+                        <div>
+                            <p >HUMIDITY</p>
+                        </div>
+                        <div>
+                            <p id="humidity-para-layout2">
+                                
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="clouds card" id="clouds-layout2">
+                        <div>
+                            <img id="clouds-icon-layout2" src="Asset/clouds.png" alt="" width="40px">
+                        </div>
+                        <div>
+                            <p >CLOUDS</p>
+                        </div>
+                        <div>
+                            <p id="clouds-para-layout2">
+                                
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <script src="script.js">
+        
+    </script>
+    
+</body>
+</html>
