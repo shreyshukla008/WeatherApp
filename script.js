@@ -118,7 +118,7 @@ searchWeather.addEventListener('click', () => {
 async function getLatLon(cityName){
 
     try{
-        const response = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&appid=${APIkey}`);
+        const response = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&appid=${APIkey}`);
         const result = await response.json();
 
         if(!result[0].name){
@@ -163,7 +163,7 @@ async function getWeather(city) {
                 layoutTwoLocationName.innerText = city;
                 layoutTwoLocationIcon.src = `https://flagcdn.com/144x108/${data?.sys?.country.toLowerCase()}.png`;
                 layoutTwoWeatherStatus.innerText = data.weather[0].main;
-                layoutTwoWeatherIcon.src = `http://openweathermap.org/img/w/${data?.weather?.[0]?.icon}.png`;
+                layoutTwoWeatherIcon.src = `https://openweathermap.org/img/w/${data?.weather?.[0]?.icon}.png`;
                 layoutTwoLocationTemperature.innerText = data.main.temp + " °C";
                 layoutTwoWindSpeedPara.innerText = data.wind.speed + " M/S";
                 layoutTwoHumidityPara.innerText = data.main.humidity + " %";
@@ -272,7 +272,7 @@ inputField.addEventListener('keypress', async(event) => {
                 layoutTwoLocationName.innerText = data.name;
                 layoutTwoLocationIcon.src = `https://flagcdn.com/144x108/${data?.sys?.country.toLowerCase()}.png`;
                 layoutTwoWeatherStatus.innerText = data.weather[0].main;
-                layoutTwoWeatherIcon.src = `http://openweathermap.org/img/w/${data?.weather?.[0]?.icon}.png`;
+                layoutTwoWeatherIcon.src = `https://openweathermap.org/img/w/${data?.weather?.[0]?.icon}.png`;
                 layoutTwoLocationTemperature.innerText = data.main.temp + " °C";
                 layoutTwoWindSpeedPara.innerText = data.wind.speed + " M/S";
                 layoutTwoHumidityPara.innerText = data.main.humidity + " %";
